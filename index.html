@@ -17,6 +17,24 @@
             background: yellow;
         }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '466328156559238');
+        fbq('track', 'PageView');
+    </script>
+
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=466328156559238&ev=PageView&noscript=1"
+        /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 <body>
@@ -27,17 +45,17 @@
         ;(function (w, d, s, h, id) {
             w.maProjectId = id
             w.maHost = h
-            var p = 'http://'
+            var p = d.location.protocol == 'https:' ? 'https://' : 'http://'
             var u = /^.*ma_visit=[^;]+(.*)?$/.test(d.cookie)
-                ? '/dist/module_ma.js'
-                : '/api/site/1.0/' + id + '/init?referrer=' + encodeURIComponent(d.location.href) + '&ma=1'
+                ? '/dist/module.js'
+                : '/api/site/1.0/' + id + '/init?referrer=' + encodeURIComponent(d.location.href)
             var js = d.createElement(s)
             js.charset = 'UTF-8'
             js.async = 1
             js.src = p + h + u
             var js2 = d.getElementsByTagName(s)[0]
             js2.parentNode.insertBefore(js, js2)
-        })(window, document, 'script', 'ma.tklogrus.ru', 'b1bd979d68b1f6e44ae3fb638c99ff23')
+        })(window, document, 'script', 'ma.tklogrus.ru', '75718')
     }
 </script>
 <!-- Ma Counter End -->
@@ -67,9 +85,21 @@
     button.addEventListener('click', listener2);
 </script>
 
-<div>
-    <span>79123547427</span>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+    ym(66224338, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/66224338" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<div>
     <span>mail@test.com</span>
     <br />
     <span>Пишите сюда: mail@test.com</span>
