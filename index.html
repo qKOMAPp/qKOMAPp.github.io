@@ -47,8 +47,8 @@
             w.maHost = h
             var p = d.location.protocol == 'https:' ? 'https://' : 'http://'
             var u = /^.*ma_visit=[^;]+(.*)?$/.test(d.cookie)
-                ? '/dist/module.js'
-                : '/api/site/1.0/' + id + '/init?referrer=' + encodeURIComponent(d.location.href)
+                ? '/dist/module_ma.js'
+                : '/api/site/1.0/' + id + '/init?referrer=' + encodeURIComponent(d.location.href) + '?ma=1'
             var js = d.createElement(s)
             js.charset = 'UTF-8'
             js.async = 1
