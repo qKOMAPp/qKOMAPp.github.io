@@ -39,26 +39,16 @@
 
 <body>
 
-<!-- Ma Counter Start -->
-<script id="ma" type="text/javascript">
-    if ('production' === 'production') {
-        ;(function (w, d, s, h, id) {
-            w.maProjectId = id
-            w.maHost = h
-            var p = d.location.protocol == 'https:' ? 'https://' : 'http://'
-            var u = /^.*ma_visit=[^;]+(.*)?$/.test(d.cookie)
-                ? '/dist/module_ma.js'
-                : '/api/site/1.0/' + id + '/init?referrer=' + encodeURIComponent(d.location.href) + '&ma=1'
-            var js = d.createElement(s)
-            js.charset = 'UTF-8'
-            js.async = 1
-            js.src = p + h + u
-            var js2 = d.getElementsByTagName(s)[0]
-            js2.parentNode.insertBefore(js, js2)
-        })(window, document, 'script', 'ma.tklogrus.ru', '75718')
-    }
+<!-- Roistat Counter Start -->
+<script>
+    (function(w, d, s, h, id) {
+        w.roistatProjectId = id; w.roistatHost = h;
+        var p = d.location.protocol == "https:" ? "https://" : "http://";
+        var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
+        var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+    })(window, document, 'script', 'roibox.rlshukhov.dev', '64c6c0e3a4a690c4d00f7cef5ba553eb');
 </script>
-<!-- Ma Counter End -->
+<!-- Roistat Counter End -->
 
 <br /><br /><br /><br />
 <br /><br /><br /><br />
